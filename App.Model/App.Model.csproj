@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DTOMappers\TestEntityDTOMapper.cs" />
+    <Compile Remove="DTos\TestEntityDTO.cs" />
+    <Compile Remove="TestEntityDTO.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.21" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\App.Domain\App.Domain.csproj" />
+    <ProjectReference Include="..\App.Enums\App.Enums.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOMapper\Identity\" />
+    <Folder Include="DTOMapper\Shared\" />
+    <Folder Include="DTO\Identity\" />
+    <Folder Include="SearchCriteria\Shared\" />
+  </ItemGroup>
+
+</Project>

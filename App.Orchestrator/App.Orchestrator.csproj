@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ItestEntityOrch.cs" />
+    <Compile Remove="TestEntityOrch.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GeoCoordinate.NetCore" Version="1.0.0.1" />
+    <PackageReference Include="LinqKit.Microsoft.EntityFrameworkCore" Version="1.1.17" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.6.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\App.Data\App.Data.csproj" />
+    <ProjectReference Include="..\App.Enums\App.Enums.csproj" />
+    <ProjectReference Include="..\App.Model\App.Model.csproj" />
+    <ProjectReference Include="..\App.Repository\App.Repository.csproj" />
+    <ProjectReference Include="..\App.Service\App.Services.csproj" />
+    <ProjectReference Include="..\App.Utils\App.Utils.csproj" />
+  </ItemGroup>
+
+</Project>
